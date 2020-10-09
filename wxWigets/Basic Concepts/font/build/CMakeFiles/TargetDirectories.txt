@@ -1,0 +1,3 @@
+/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles/rebuild_cache.dir
+/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles/font.dir
+/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles/edit_cache.dir

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/msarfrazshafi/wxWidgets/samples/font/build",
+  "command": "/usr/bin/g++-7 -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1  -pthread -g -o CMakeFiles/font.dir/practice.cpp.o -c /home/msarfrazshafi/wxWidgets/samples/font/practice.cpp",
+  "file": "/home/msarfrazshafi/wxWidgets/samples/font/practice.cpp"
+}
+]

@@ -1,0 +1,3 @@
+/home/msarfrazshafi/wxWidgets/samples/docview_2/build/CMakeFiles/rebuild_cache.dir
+/home/msarfrazshafi/wxWidgets/samples/docview_2/build/CMakeFiles/docview.dir
+/home/msarfrazshafi/wxWidgets/samples/docview_2/build/CMakeFiles/edit_cache.dir
