@@ -1,0 +1,3 @@
+/home/msarfrazshafi/wxWidgets/samples/minimal/CMakeFiles/rebuild_cache.dir
+/home/msarfrazshafi/wxWidgets/samples/minimal/CMakeFiles/minimal.dir
+/home/msarfrazshafi/wxWidgets/samples/minimal/CMakeFiles/edit_cache.dir

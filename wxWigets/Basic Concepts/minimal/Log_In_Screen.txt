@@ -1,0 +1,160 @@
+#include <iostream>
+using namespace std;
+#include <wx/textctrl.h>
+#include <wx/button.h>
+#include <wx/wxprec.h>
+#ifndef WX_PRECOMP
+    #include <wx/wx.h>
+#endif
+int n = 0;
+class MyApp : public wxApp
+{
+    public:
+        virtual bool OnInit();
+};
+
+class MyFrame : public wxFrame
+{
+    public:
+        MyFrame();
+        wxButton *btn_start;
+        wxButton *btn_start2;
+        wxPanel* panel;
+    private:
+        void OnButtonClick(wxCommandEvent& event);
+        void OnExit(wxCommandEvent& event);
+        void OnAbout(wxCommandEvent& event);
+};
+
+class LogIn_frame : public wxFrame
+{
+    public:
+        LogIn_frame();
+        ~LogIn_frame();
+        wxTextCtrl *text1;
+        wxTextCtrl *text2;
+        wxTextCtrl *edit1;
+        wxTextCtrl *edit2;
+        wxPanel* panel2;
+        wxButton *btn_logIn;
+    private:
+        void OnLogIn(wxCommandEvent& event);
+        //void OnButtonClick2(wxCommandEvent& event);
+};
+enum
+{
+    start_button = 1,
+    start_button2 = 4,
+    txt_text1 = 2,
+    txt_text2 = 3,
+    txt_edit1 = 5,
+    txt_edit2 = 6,
+    logIn_button = 7
+};
+
+LogIn_frame::LogIn_frame() : wxFrame(NULL, wxID_ANY, "Log In Screen")
+{
+    n++;
+      Center();
+      panel2= new wxPanel(this, wxID_ANY);
+      text1 = new wxTextCtrl(panel2, txt_text1,wxT("User Name "), wxPoint(130, 150), wxDefaultSize,wxTE_READONLY , wxDefaultValidator, wxTextCtrlNameStr);
+      text2 = new wxTextCtrl(panel2, txt_text2,wxT("Password "), wxPoint(130, 180), wxDefaultSize,wxTE_READONLY , wxDefaultValidator, wxTextCtrlNameStr);
+    
+      edit1 = new wxTextCtrl(panel2, txt_edit1,wxT(""), wxPoint(250, 150), wxDefaultSize,wxTE_PROCESS_ENTER , wxDefaultValidator, wxTextCtrlNameStr);
+      edit2 = new wxTextCtrl(panel2, txt_edit2,wxT(""), wxPoint(250, 180), wxDefaultSize,wxTE_PASSWORD, wxDefaultValidator, wxTextCtrlNameStr);
+
+      btn_logIn = new wxButton(panel2,logIn_button,_T("Log In"),  wxPoint(180, 220));//, wxDefaultSize,0); 
+      Bind(wxEVT_BUTTON,&LogIn_frame::OnLogIn,this,logIn_button);
+      
+}
+
+LogIn_frame::~LogIn_frame()
+{
+    n--;
+}
+
+void LogIn_frame::OnLogIn(wxCommandEvent& event)
+{
+    wxString credential = "sarfraz";
+    if((edit1->GetValue()== credential )& (edit2->GetValue()== credential ))
+    {
+        wxMessageBox("You are Loged In "," ",wxOK | wxICON_INFORMATION);
+    }
+    else
+    {
+        wxMessageBox("Incorrect Username or Password"," ",wxOK | wxICON_INFORMATION);   
+    }
+}
+
+
+MyFrame::MyFrame()
+    : wxFrame(NULL, wxID_ANY, "Start Screen")
+{
+    wxMenu *menuFile = new wxMenu;
+    menuFile->Append(wxID_EXIT);
+
+    wxMenu *menuHelp = new wxMenu;
+    menuHelp->Append(wxID_ABOUT);
+
+    wxMenuBar *menuBar = new wxMenuBar;
+    menuBar->Append(menuFile,"&File");
+    menuBar->Append(menuHelp,"&Help");
+    SetMenuBar( menuBar );
+    Bind(wxEVT_MENU, &MyFrame::OnAbout, this,wxID_ABOUT);
+    Bind(wxEVT_MENU, &MyFrame::OnExit, this, wxID_EXIT);
+    
+    panel= new wxPanel(this, wxID_ANY);
+    //button
+    btn_start = new wxButton(panel,start_button ,_T("Start"), wxPoint(150, 150));//wxDefaultPosition, wxDefaultSize, 0); 
+    Bind(wxEVT_BUTTON,&MyFrame::OnButtonClick,this,start_button);
+}
+
+void MyFrame::OnExit(wxCommandEvent& event)
+{
+
+    if(n>=1)
+    {
+        //wxLogMessage("Hello world on hello");
+        int ans = wxMessageBox("Please close Log In Window first "," ",wxOK | wxCANCEL );
+        if(ans == wxOK)
+        {
+            wxMessageBox("j");
+        }
+        else if (ans == wxCANCEL)
+        {
+            wxMessageBox("Cancel pressed "," ",wxOK |wxCANCEL);
+        }
+        
+    }
+    else
+    {
+        Close(true);
+        //wxMessageBox("Do you want to close Log In window "," ",wxOK |wxCANCEL);
+    }       
+}
+
+void MyFrame::OnAbout(wxCommandEvent& event)
+{
+    wxMessageBox("Log In Screen"," ",wxOK | wxICON_INFORMATION); 
+}
+
+bool MyApp::OnInit()
+{
+    MyFrame *frame = new MyFrame();
+    frame->Show(true);
+    return true;
+}
+wxIMPLEMENT_APP(MyApp);
+
+void MyFrame::OnButtonClick(wxCommandEvent& event)
+{
+   if(n==0)
+   {  
+    LogIn_frame *frame2 = new LogIn_frame();
+    frame2->Show(true);
+   }
+}
+
+
+
+

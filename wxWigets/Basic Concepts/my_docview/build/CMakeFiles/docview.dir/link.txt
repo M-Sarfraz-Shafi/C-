@@ -1,0 +1,1 @@
+/usr/bin/g++-7  -pthread -g -rdynamic CMakeFiles/docview.dir/docview.cpp.o -o docview   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -L/usr/local/lib -pthread -lwx_gtk3u_core-3.1 -lwx_baseu-3.1 -lwx_gtk3u_aui-3.1 
