@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/layout/build",
+  "command": "/usr/bin/g++-7 -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1  -pthread -g -o CMakeFiles/layout.dir/sizer_GridSizer.cpp.o -c /home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/layout/sizer_GridSizer.cpp",
+  "file": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/layout/sizer_GridSizer.cpp"
+}
+]

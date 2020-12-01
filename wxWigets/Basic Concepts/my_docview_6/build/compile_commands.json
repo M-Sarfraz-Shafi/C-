@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/build",
+  "command": "/usr/bin/g++-7 -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1  -pthread -g -o CMakeFiles/docview.dir/docview.cpp.o -c /home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/docview.cpp",
+  "file": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/docview.cpp"
+},
+{
+  "directory": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/build",
+  "command": "/usr/bin/g++-7 -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1  -pthread -g -o CMakeFiles/docview.dir/doc.cpp.o -c /home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/doc.cpp",
+  "file": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/doc.cpp"
+},
+{
+  "directory": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/build",
+  "command": "/usr/bin/g++-7 -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.1 -isystem /usr/local/include/wx-3.1  -pthread -g -o CMakeFiles/docview.dir/view.cpp.o -c /home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/view.cpp",
+  "file": "/home/msarfrazshafi/wx/wxWidgets-3.1.4/samples/my_docview_6/view.cpp"
+}
+]
