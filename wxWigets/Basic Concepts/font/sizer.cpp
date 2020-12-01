@@ -1,7 +1,5 @@
 /*
-    Splitter Window +
-    Bitmap Button 4 -> arrows+
-    Image load 
+    Two button Sizer 
 */
 #include <wx/splitter.h>
 #include <wx/wx.h>
@@ -15,13 +13,14 @@ class MyFrame : public wxFrame
 public:
     MyFrame();
     ~MyFrame();
-    wxButton *myButton, *myButton2;
+    wxButton *myButton, *myButton2, *myButton3;
 };
 
 enum
 {
     ID_BUTTON = 1,
-    ID_BUTTON2 = 2
+    ID_BUTTON2 = 2,
+    ID_BUTTON3 = 3
 };
 
 MyFrame::MyFrame() : wxFrame(nullptr, wxID_ANY, "Box Sizer", wxPoint(30, 30), wxSize(800, 600))
@@ -29,7 +28,14 @@ MyFrame::MyFrame() : wxFrame(nullptr, wxID_ANY, "Box Sizer", wxPoint(30, 30), wx
     wxSizer *sizer = new wxBoxSizer(wxVERTICAL);
     myButton = new wxButton(this, ID_BUTTON, "Button1", wxPoint(50, 50), wxSize(100, 100), 0, wxDefaultValidator, wxButtonNameStr);
     myButton2 = new wxButton(this, ID_BUTTON2, "Button2", wxPoint(100, 200), wxSize(100, 100), 0, wxDefaultValidator, wxButtonNameStr);
-    sizer->Add(myButton, wxSizerFlags().Center());
+    // myButton3 = new wxButton(this, ID_BUTTON2, "Button3", wxPoint(200, 200), wxSize(100, 100), 0, wxDefaultValidator, wxButtonNameStr);
+    // void Add(wxWindow * window, int stretch = 0, int flags = 0,int border = 0);
+    // void Add(wxSizer* window, int stretch = 0, int flags = 0,int border = 0);
+    //sizer->Add(0, 0, 1);
+    sizer->Add(myButton,wxSizerFlags().Center()); //.Shaped().Border(wxALL,10)
+    sizer->Add(0, 0, 1);
+    sizer->Add(myButton2, wxSizerFlags().Center()); //.Shaped().Border(wxALL,10)
+   // sizer->Add(0, 0, 1);
 
     //sizer->Add(myButton2, wxSizerFlags().Centre());
     SetSizerAndFit(sizer);

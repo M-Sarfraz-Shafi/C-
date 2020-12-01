@@ -38,11 +38,6 @@ void wxImagePanel::OnPaint(wxPaintEvent & evt)
     dc.DrawBitmap( image, 0, 0, false );
 }
 
-/*void wxImagePanel::paintNow()
-{
-   // wxClientDC dc(this);
-   // render(dc);
-}*/
 
 void wxImagePanel::render(wxDC&  dc)
 {

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/font.dir/practice.cpp.o"
+  "CMakeFiles/font.dir/subImage.cpp.o"
   "font"
   "font.pdb"
 )

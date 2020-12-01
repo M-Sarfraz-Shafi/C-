@@ -142,32 +142,32 @@ font/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/font.dir/build.make CMakeFiles/font.dir/build
 .PHONY : font/fast
 
-practice.o: practice.cpp.o
+subImage.o: subImage.cpp.o
 
-.PHONY : practice.o
+.PHONY : subImage.o
 
 # target to build an object file
-practice.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/font.dir/build.make CMakeFiles/font.dir/practice.cpp.o
-.PHONY : practice.cpp.o
+subImage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/font.dir/build.make CMakeFiles/font.dir/subImage.cpp.o
+.PHONY : subImage.cpp.o
 
-practice.i: practice.cpp.i
+subImage.i: subImage.cpp.i
 
-.PHONY : practice.i
+.PHONY : subImage.i
 
 # target to preprocess a source file
-practice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/font.dir/build.make CMakeFiles/font.dir/practice.cpp.i
-.PHONY : practice.cpp.i
+subImage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/font.dir/build.make CMakeFiles/font.dir/subImage.cpp.i
+.PHONY : subImage.cpp.i
 
-practice.s: practice.cpp.s
+subImage.s: subImage.cpp.s
 
-.PHONY : practice.s
+.PHONY : subImage.s
 
 # target to generate assembly for a file
-practice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/font.dir/build.make CMakeFiles/font.dir/practice.cpp.s
-.PHONY : practice.cpp.s
+subImage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/font.dir/build.make CMakeFiles/font.dir/subImage.cpp.s
+.PHONY : subImage.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... font"
-	@echo "... practice.o"
-	@echo "... practice.i"
-	@echo "... practice.s"
+	@echo "... subImage.o"
+	@echo "... subImage.i"
+	@echo "... subImage.s"
 .PHONY : help
 
 

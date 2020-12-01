@@ -6,15 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/msarfrazshafi/wxWidgets/samples/font/myheader.h
-
-/home/msarfrazshafi/wxWidgets/samples/font/practice.cpp
-wx/docview.h
--
+/home/msarfrazshafi/wxWidgets/samples/font/subImage.cpp
 wx/wx.h
 -
-myheader.h
-/home/msarfrazshafi/wxWidgets/samples/font/myheader.h
+wx/utils.h
+-
+iostream
+-
+string.h
+-
+stdlib.h
+-
 
 /usr/local/include/wx-3.1/wx/accel.h
 wx/defs.h
@@ -402,14 +404,6 @@ wx/hashmap.h
 wx/arrstr.h
 /usr/local/include/wx-3.1/wx/wx/arrstr.h
 
-/usr/local/include/wx-3.1/wx/cmndata.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
-wx/gdicmn.h
-/usr/local/include/wx-3.1/wx/wx/gdicmn.h
-wx/stream.h
-/usr/local/include/wx-3.1/wx/wx/stream.h
-
 /usr/local/include/wx-3.1/wx/colour.h
 wx/defs.h
 /usr/local/include/wx-3.1/wx/wx/defs.h
@@ -748,44 +742,6 @@ wx/qt/dirdlg.h
 
 /usr/local/include/wx-3.1/wx/dlimpexp.h
 
-/usr/local/include/wx-3.1/wx/dlist.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
-wx/utils.h
-/usr/local/include/wx-3.1/wx/wx/utils.h
-wx/beforestd.h
-/usr/local/include/wx-3.1/wx/wx/beforestd.h
-algorithm
--
-iterator
--
-list
--
-wx/afterstd.h
-/usr/local/include/wx-3.1/wx/wx/afterstd.h
-
-/usr/local/include/wx-3.1/wx/docview.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
-wx/list.h
-/usr/local/include/wx-3.1/wx/wx/list.h
-wx/dlist.h
-/usr/local/include/wx-3.1/wx/wx/dlist.h
-wx/string.h
-/usr/local/include/wx-3.1/wx/wx/string.h
-wx/frame.h
-/usr/local/include/wx-3.1/wx/wx/frame.h
-wx/filehistory.h
-/usr/local/include/wx-3.1/wx/wx/filehistory.h
-wx/vector.h
-/usr/local/include/wx-3.1/wx/wx/vector.h
-wx/print.h
-/usr/local/include/wx-3.1/wx/wx/print.h
-wx/iosfwrap.h
-/usr/local/include/wx-3.1/wx/wx/iosfwrap.h
-wx/stream.h
-/usr/local/include/wx-3.1/wx/wx/stream.h
-
 /usr/local/include/wx-3.1/wx/dynarray.h
 wx/defs.h
 /usr/local/include/wx-3.1/wx/wx/defs.h
@@ -907,22 +863,6 @@ fcntl.h
 -
 sys/types.h
 -
-
-/usr/local/include/wx-3.1/wx/filehistory.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
-wx/windowid.h
-/usr/local/include/wx-3.1/wx/wx/windowid.h
-wx/object.h
-/usr/local/include/wx-3.1/wx/wx/object.h
-wx/list.h
-/usr/local/include/wx-3.1/wx/wx/list.h
-wx/string.h
-/usr/local/include/wx-3.1/wx/wx/string.h
-wx/arrstr.h
-/usr/local/include/wx-3.1/wx/wx/arrstr.h
-wx/gtk/filehistory.h
-/usr/local/include/wx-3.1/wx/wx/gtk/filehistory.h
 
 /usr/local/include/wx-3.1/wx/filename.h
 wx/arrstr.h
@@ -1076,10 +1016,6 @@ wx/gdicmn.h
 wx/bitmap.h
 /usr/local/include/wx-3.1/wx/generic/wx/bitmap.h
 
-/usr/local/include/wx-3.1/wx/generic/printps.h
-wx/prntbase.h
-/usr/local/include/wx-3.1/wx/generic/wx/prntbase.h
-
 /usr/local/include/wx-3.1/wx/generic/scrolwin.h
 wx/recguard.h
 /usr/local/include/wx-3.1/wx/generic/wx/recguard.h
@@ -1165,8 +1101,6 @@ wx/filectrl.h
 /usr/local/include/wx-3.1/wx/gtk/filedlg.h
 wx/gtk/filectrl.h
 /usr/local/include/wx-3.1/wx/gtk/wx/gtk/filectrl.h
-
-/usr/local/include/wx-3.1/wx/gtk/filehistory.h
 
 /usr/local/include/wx-3.1/wx/gtk/font.h
 
@@ -1809,36 +1743,6 @@ wx/chkconf.h
 /usr/local/include/wx-3.1/wx/platinfo.h
 wx/string.h
 /usr/local/include/wx-3.1/wx/wx/string.h
-
-/usr/local/include/wx-3.1/wx/print.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
-wx/msw/printwin.h
-/usr/local/include/wx-3.1/wx/wx/msw/printwin.h
-wx/osx/printmac.h
-/usr/local/include/wx-3.1/wx/wx/osx/printmac.h
-wx/qt/printqt.h
-/usr/local/include/wx-3.1/wx/wx/qt/printqt.h
-wx/generic/printps.h
-/usr/local/include/wx-3.1/wx/wx/generic/printps.h
-
-/usr/local/include/wx-3.1/wx/prntbase.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
-wx/event.h
-/usr/local/include/wx-3.1/wx/wx/event.h
-wx/cmndata.h
-/usr/local/include/wx-3.1/wx/wx/cmndata.h
-wx/panel.h
-/usr/local/include/wx-3.1/wx/wx/panel.h
-wx/scrolwin.h
-/usr/local/include/wx-3.1/wx/wx/scrolwin.h
-wx/dialog.h
-/usr/local/include/wx-3.1/wx/wx/dialog.h
-wx/frame.h
-/usr/local/include/wx-3.1/wx/wx/frame.h
-wx/dc.h
-/usr/local/include/wx-3.1/wx/wx/dc.h
 
 /usr/local/include/wx-3.1/wx/radiobox.h
 wx/defs.h

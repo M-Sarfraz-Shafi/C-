@@ -76,27 +76,27 @@ include CMakeFiles/font.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/font.dir/flags.make
 
-CMakeFiles/font.dir/practice.cpp.o: CMakeFiles/font.dir/flags.make
-CMakeFiles/font.dir/practice.cpp.o: ../practice.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/font.dir/practice.cpp.o"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/font.dir/practice.cpp.o -c /home/msarfrazshafi/wxWidgets/samples/font/practice.cpp
+CMakeFiles/font.dir/subImage.cpp.o: CMakeFiles/font.dir/flags.make
+CMakeFiles/font.dir/subImage.cpp.o: ../subImage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/font.dir/subImage.cpp.o"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/font.dir/subImage.cpp.o -c /home/msarfrazshafi/wxWidgets/samples/font/subImage.cpp
 
-CMakeFiles/font.dir/practice.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/font.dir/practice.cpp.i"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/msarfrazshafi/wxWidgets/samples/font/practice.cpp > CMakeFiles/font.dir/practice.cpp.i
+CMakeFiles/font.dir/subImage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/font.dir/subImage.cpp.i"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/msarfrazshafi/wxWidgets/samples/font/subImage.cpp > CMakeFiles/font.dir/subImage.cpp.i
 
-CMakeFiles/font.dir/practice.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/font.dir/practice.cpp.s"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/msarfrazshafi/wxWidgets/samples/font/practice.cpp -o CMakeFiles/font.dir/practice.cpp.s
+CMakeFiles/font.dir/subImage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/font.dir/subImage.cpp.s"
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/msarfrazshafi/wxWidgets/samples/font/subImage.cpp -o CMakeFiles/font.dir/subImage.cpp.s
 
 # Object files for target font
 font_OBJECTS = \
-"CMakeFiles/font.dir/practice.cpp.o"
+"CMakeFiles/font.dir/subImage.cpp.o"
 
 # External object files for target font
 font_EXTERNAL_OBJECTS =
 
-font: CMakeFiles/font.dir/practice.cpp.o
+font: CMakeFiles/font.dir/subImage.cpp.o
 font: CMakeFiles/font.dir/build.make
 font: CMakeFiles/font.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable font"

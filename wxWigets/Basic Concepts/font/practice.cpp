@@ -3,51 +3,35 @@
     Drawing 
     2 separte panels    
 */
-#include <wx/docview.h>
+
 #include <wx/wx.h>
-#include "myheader.h"
-using namespace std;
 
-enum
-{
-    ID_BUTTON = 1
-};
-
-class MyView : public wxView
-{
-    public:
-    MyView();
-};
-
-MyView::MyView(): wxView()
-{
-    //wxButton * myButton;
-    //myButton = new wxButton(this,ID_BUTTON,"My Button",wxDefaultPosition,wxDefaultSize,0,wxDefaultValidator,wxButtonNameStr );
-
-}
 //-----------------------------My Frame Start-----------------------------//
 
-
-enum
+class MyFrame : public wxFrame
 {
-    ID_BUTTON_2 = 1
+public:
+    MyFrame();
+    ~MyFrame();
+    wxImage image;
+    virtual void OnDraw(wxDC &dc);
 };
-
-void MyFrame::OnButtonClicked(wxCommandEvent& event)
-{
-    cout<<"Button clicked"<<endl;
-}
-
 
 MyFrame::MyFrame() : wxFrame(nullptr, wxID_ANY, "Button with wxView", wxPoint(30, 30), wxSize(800, 600))
 {
-    wxButton *mybutton;
-    mybutton = new wxButton(this,ID_BUTTON_2,"mybutton");
-    Bind(wxEVT_COMMAND_BUTTON_CLICKED, &MyFrame::OnButtonClicked,this,ID_BUTTON_2);
+    wxString filename = wxFileSelector(_T("Select file"), _T(""), _T(""), _T(""), _T("All files (*.*)|*.*"));
+    bool isLoaded = image.LoadFile(filename, wxBITMAP_TYPE_ANY, -1);
+}
+
+void MyFrame::OnDraw(wxDC &dc)
+{
+    wxBitmap image_map(image);
+    dc.DrawBitmap(image_map, 0, 0, false);
 }
 
 MyFrame::~MyFrame()
 {
+
 }
 
 //-----------------------------My Frame End-----------------------------//
@@ -61,7 +45,6 @@ public:
 
 private:
     MyFrame *m_frame = NULL;
-   
 };
 
 MyApp::MyApp()
@@ -70,14 +53,16 @@ MyApp::MyApp()
 
 MyApp::~MyApp()
 {
+    
 }
 
 bool MyApp::OnInit()
 {
     wxInitAllImageHandlers();
     m_frame = new MyFrame();
-   
+
     m_frame->Show();
+    //m_frame->OnDraw(dc);
     return true;
 }
 

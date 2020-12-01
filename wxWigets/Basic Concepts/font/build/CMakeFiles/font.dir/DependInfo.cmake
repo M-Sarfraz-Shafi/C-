@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/msarfrazshafi/wxWidgets/samples/font/practice.cpp" "/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles/font.dir/practice.cpp.o"
+  "/home/msarfrazshafi/wxWidgets/samples/font/subImage.cpp" "/home/msarfrazshafi/wxWidgets/samples/font/build/CMakeFiles/font.dir/subImage.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

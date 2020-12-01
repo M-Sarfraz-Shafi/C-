@@ -34,7 +34,7 @@ MyCanvas::MyCanvas(wxFrame* parent, wxString file, wxBitmapType format) : wxPane
 
 void MyCanvas::OnPaint(wxPaintEvent & evt)
 {
-    image.LoadFile(file, format,-1);
+    image.LoadFile(file, format,-1);0
     wxPaintDC dc(this);
     wxBitmap image_map(image);
     dc.DrawBitmap( image_map, 0, 0, false );

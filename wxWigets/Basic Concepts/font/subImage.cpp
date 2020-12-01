@@ -11,6 +11,7 @@
 #include <stdlib.h>
 using namespace std;
 
+int image_new = 0;
 //-----------------------------My Image Load Start-----------------------------//
 class MyCanvas : public wxScrolledWindow
 {
@@ -42,7 +43,6 @@ enum{
 
 BEGIN_EVENT_TABLE(MyCanvas, wxScrolledWindow)
     EVT_PAINT(MyCanvas::OnPaint)
-    //EVT_MOTION(MyCanvas::OnMotion)
     EVT_LEFT_DOWN(MyCanvas::OnLeftClick)
     EVT_MOTION(MyCanvas::OnDragging)
     EVT_BUTTON(ID_BUTTON_BM, MyCanvas::OnButtonClick)
@@ -52,7 +52,6 @@ END_EVENT_TABLE()
 MyCanvas::MyCanvas(wxFrame* parent, wxString file, wxBitmapType format,int startX, int startY) : wxScrolledWindow(parent)
 {
     this->SetBackgroundColour(*wxBLUE);
-    //this->SetBackgroundColour((11,11,11));
     this->SetSize(300,300);
     image.LoadFile(file, format,-1);
     w = image.GetWidth();
@@ -159,7 +158,16 @@ void MyCanvas::Draw_Image()
 {
     wxClientDC dc(this);
     wxBitmap image_map(image);
-    dc.DrawBitmap( image_map, 0, 0, false ); 
+    if(image_new==0)
+    {
+        dc.DrawBitmap( image_map, 0, 0, false ); 
+    }
+    else
+    {
+        dc.DrawBitmap( image_map, 10, 10, false ); 
+        
+    }
+    
 }
 
 void MyCanvas::OnPaint(wxPaintEvent & evt)
@@ -174,7 +182,34 @@ void MyCanvas::OnButtonClick(wxCommandEvent& event)
 {
     wxClientDC dc(this);
     dc.Clear();
-    Draw_Image();
+    //Draw_Image();
+    cout<<"Sarfraz"<<endl;
+    cout<<mouseX1<<" : "<<mouseY1<<" : " <<w<<" : "<<h<<endl;
+
+    int x = mouseX1;
+    int y = mouseY1;
+    int w1 = w;
+    if(w1>(w-x))
+    {
+        w1 = w;
+    }
+    else
+    {
+        w1 = 30;
+    }
+    cout<<"Rec w = "<<w<<" : sub: "<< w1<<endl;
+
+    int h1 =60;
+    //wxRect suRect(0,0,20,20);
+    wxRect suRect(x,y,w1,h1);
+    wxImage subImage;
+    image_new = 1;
+    subImage = image.GetSubImage(suRect);
+     wxBitmap image_map2(subImage);
+    dc.DrawBitmap( image_map2, 15, 15, false); 
+
+   // Draw_Image();
+   // subImage = image.GetSubImage(*suRect);
 }
 
 void MyCanvas::CreateButton()
